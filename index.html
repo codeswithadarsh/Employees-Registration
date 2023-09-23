@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees Registration</title>
+    <link rel="stylesheet" href="style.css" class="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav>
+        <h1>Employees Registration</h1>
+        <i onclick="myFunction()" class="fa-solid fa-toggle-off dark-style dark-mode" style="color: #ffffff;"></i>
+
+    </nav>
+     <div class="mardesign">
+    <marquee scrollamount="12" width="100%" direction="right" height="100px">
+        Protecting Your Future, Guarding Against Fraud: Verify Employee Registration Securely!
+        </marquee>
+
+    </div>
+
+    <div id="root">
+        <form id="form">
+            <input type="text" placeholder="Employee Name" name="name" required />
+            <input type="email" placeholder="Email" name="email" required />
+            <input type="text" placeholder="Employee ID" name="empId" required />
+            <input type="text" placeholder="Company" name="company" required />
+            <select name="designation" required>
+              <option value="SDE">SDE</option>
+              <option value="QA">QA</option>
+              <option value="TL">TL</option>
+              <option value="MANAGER">Manager</option>
+            </select>
+    
+            <button class="mybtn">Add Employee</button>
+          </form>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Employee Name</th>
+                <th>Email</th>
+                <th>Employee ID</th>
+                <th>Company Name</th>
+                <th>Designation</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+
+          <div>
+          <div class="container">
+                <h1>NOTES</h1>
+                <p>To fill this form, you have to fill your name, email, employee Id, company name and then click on submit. After submitting, your form will be submitted.</p>
+          </div>
+
+          <div class="container2">
+            <h1>Important Rules !!!</h1>
+            <p>
+                &#8226 Check Spelling before sumbit.<br>
+                &#8226 Fill Correct Information.<br>
+                &#8226 Do not dublicate the Information.<br>
+                &#8226 Can delete any Information in the list.
+            </ul>
+            </p>
+      </div>
+
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

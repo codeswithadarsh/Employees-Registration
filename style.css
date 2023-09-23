@@ -1,0 +1,192 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #ecf0f6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    display: flex;
+    width: 100%;
+
+}
+
+nav>h1 {
+    color: aliceblue;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.dark-style {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    margin-right: 50px;
+}
+
+.dark-mode {
+    background-color: rgb(124, 121, 121);
+    color: white;
+
+    .container2>p {
+        color: #000000;
+    }
+
+    .container>p {
+        color: #000000;
+    }
+
+}
+
+.mardesign{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #d90808;
+    padding: 15px;
+    margin-bottom: -105px;
+    font-weight: 700;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    gap: 20px;
+    margin: 20px;
+
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+select {
+    border-radius: 5px;
+    border: 2px solid;
+    padding: 10px;
+}
+
+select>option {
+    background-color: rgb(237, 228, 50);
+}
+
+.mybtn {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.mybtn:hover {
+    background-color: rgb(212, 111, 2);
+}
+
+table {
+    align-self: start;
+    border-collapse: collapse;
+}
+
+table,
+td,
+th {
+    border: 2px solid black;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    vertical-align: center;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.btnstyle {
+    background-color: rgb(228, 8, 8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.container {
+    background: linear-gradient(90deg, #87e9a8, #a9e1d8);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.container>h1 {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.container>p {
+    text-align: center;
+    padding: 10px;
+}
+
+.container2 {
+    margin-top: 20px;
+    border: 1px solid var(--component-stroke-colour, #e0e0e0);
+    position: relative;
+    background: var(--gray-50, #f9fafb);
+}
+
+.container2>h1 {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.container2>p {
+    padding: 10px;
+}
+
+@media screen and (max-width: 756px) {
+
+    #root {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table,
+    td,
+    th {}
+
+
+}
