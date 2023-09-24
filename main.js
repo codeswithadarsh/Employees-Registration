@@ -46,6 +46,7 @@ function addEmployee(employee) {
         <td>${employee.company}</td>
         <td>${employee.designation}</td>
         <td>
+            <button class="btnedit" onclick="editData(this)">Edit</button>
             <button class="btnstyle" onclick="deleteEmployee(this)" data-empid="${employee.empId}">Delete</button>
         </td>
     `;
@@ -92,9 +93,43 @@ form.addEventListener("submit", (event) => {
 });
 
 
+
+function editData(buttonRef) {
+  // Get the <tr> element containing the employee data
+  let parentTr = buttonRef.parentNode.parentNode;
+
+  // Extract the employee data from the table row
+  let employee = {
+    name: parentTr.cells[0].textContent,
+    email: parentTr.cells[1].textContent,
+    empId: parentTr.cells[2].textContent,
+    company: parentTr.cells[3].textContent,
+    designation: parentTr.cells[4].textContent,
+  };
+
+  // Populate the edit form with the employee's data
+  form.name.value = employee.name;
+  form.email.value = employee.email;
+  form.empId.value = employee.empId;
+  form.company.value = employee.company;
+  form.designation.value = employee.designation;
+
+  // Remove the current table row from the DOM
+  parentTr.remove();
+
+  // Update the employees array by removing the employee
+  for (let i = 0; i < employees.length; i++) {
+    if (employees[i].empId === employee.empId) {
+      employees.splice(i, 1);
+      break;
+    }
+  }
+}
+
+
 //dark mode system
 
 function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
- }
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
